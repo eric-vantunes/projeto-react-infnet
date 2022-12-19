@@ -13,6 +13,7 @@ import AppBar from './components/app-bar/app-bar';
 
 const Login = lazy(() => import('./pages/auth/login/login'))
 const Register = lazy(() => import('./pages/auth/register/register'));
+const Home = lazy(() => import('./pages/home/home'));
 const Cart = lazy(() => import('./pages/cart/cart'));
 const Catalog = lazy(() => import('./pages/catalog/catalog'));
 const Checkout = lazy(() => import('./pages/checkout/checkout'));
@@ -25,6 +26,7 @@ function App() {
       <AppBar/>
       <Suspense fallback={<Loading/>}>
         <Routes>
+          <Route path="/home" element={<Home />}/>
           <Route path="/" element={<Catalog />}/>
           <Route path="/catalog" element={<Catalog />}/>
           <Route path="/register" element={<Register />} />

@@ -18,7 +18,7 @@ const Product = () => {
 
     useEffect(() => {
         loadData()
-    }, [])
+    })
     return product ? 
         <ProductItem product={product}/> : 
         <NotFound 

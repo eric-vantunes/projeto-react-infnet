@@ -7,7 +7,7 @@ const Catalog = () => {
     const [catalog, setCatalog] = useState([]);
 
     const loadData = async () => {
-        const response = await get("https://demo8462142.mockable.io/products");
+        const response = await get(" https://demo8456006.mockable.io/products");
         setCatalog(response.data)
     }
 

@@ -15,17 +15,18 @@ import './app-bar.css';
 
 const pages = [
     {
+      name: "Home",
+      link: 'home' 
+    },
+
+    {
         name: "Catalogos",
         link: 'catalog'
     },
     {
-        name: "Login",
+        name: " Sair",
         link: 'login'
     }, 
-    {
-        name: "Cadastro",
-        link: 'register'
-    }
 ];
 const LocalAppBar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -39,7 +40,7 @@ const LocalAppBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ background: '#333' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <ShoppingBagIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
