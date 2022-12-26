@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 
 const localStyleText = {
-    fontWeight: '300'
+    fontWeight: '300',
+    textAlign: 'center'
+    
 }
 
 const Text = ({ text, variant, component, style, boxStyle }) => {

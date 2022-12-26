@@ -12,7 +12,9 @@ const Product = () => {
     const loadData = async () => {
         // const id = 1;
         const id = params.id; //Correto
-        const response = await get(`https://demo8462142.mockable.io/produto/${id}`);
+        const response = await get(
+            `https://demo8462142.mockable.io/produto/${id}`, 
+            `http://demo4033977.mockable.io/home/${id}`)
         setProduct(response.data)
     }
 

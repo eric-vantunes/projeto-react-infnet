@@ -20,7 +20,7 @@ const pages = [
     },
 
     {
-        name: "Catalogos",
+        name: "+ Produtos",
         link: 'catalog'
     },
     {
@@ -40,7 +40,7 @@ const LocalAppBar = () => {
   };
 
   return (
-    <AppBar position="static" style={{ background: '#333' }}>
+    <AppBar position="static" style={{ background: '#0C375F' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <ShoppingBagIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
