@@ -1,6 +1,5 @@
 import '../auth.css';
 import { useState } from 'react';
-import SendTwoToneIcon from '@mui/icons-material/Send';
 import { Link } from 'react-router-dom';
 
 import Logo from "../../../assets/img/logo-ecommerce.png";
@@ -190,7 +189,6 @@ const Register = () => {
                     marginTop: '16px',
                     padding: '10px 5px'
                 }}
-                // StartIcon={SendTwoToneIcon}
                 uppercase={true}
                 title={"Registrar"}
                 type={"button"}

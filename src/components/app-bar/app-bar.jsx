@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -8,28 +8,27 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import './app-bar.css';
+import "./app-bar.css";
 
 const pages = [
-    {
-      name: "Home",
-      link: 'home' 
-    },
+  {
+    name: "Home",
+    link: "home",
+  },
 
-    {
-        name: "+ Produtos",
-        link: 'catalog'
-    },
-    {
-        name: " Sair",
-        link: 'login'
-    }, 
+  {
+    name: "+ Produtos",
+    link: "catalog",
+  },
+  {
+    name: " Sair",
+    link: "login",
+  },
 ];
 const LocalAppBar = () => {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -40,10 +39,12 @@ const LocalAppBar = () => {
   };
 
   return (
-    <AppBar position="static" style={{ background: '#0C375F' }}>
+    <AppBar position="static" style={{ background: "#0C375F" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <ShoppingBagIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <ShoppingBagIcon
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+          />
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -61,17 +62,17 @@ const LocalAppBar = () => {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "left"
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "left"
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" }
+                display: { xs: "block", md: "none" },
               }}
             >
               {pages.map((page) => (
@@ -81,8 +82,11 @@ const LocalAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Box className="menu-item" sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
+          <Box
+            className="menu-item"
+            sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+          >
             {pages.map((page) => (
               <Link to={`/${page.link}`}>{page.name}</Link>
             ))}
@@ -90,15 +94,15 @@ const LocalAppBar = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Link to="/cart">
-                <IconButton sx={{ p: 0, color: "#fff" }}>
-                    <ShoppingCartIcon />
-                </IconButton>
+              <IconButton sx={{ p: 0, color: "#fff" }}>
+                <ShoppingCartIcon />
+              </IconButton>
             </Link>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
   );
-}
+};
 
 export default LocalAppBar;
